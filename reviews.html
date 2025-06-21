@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Start - Отзывы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Python Start</a>
+                <ul class="nav-links">
+                     <li><a href="index.html">Главная</a></li>
+                     <li><a href="modules.html">Модули</a></li>
+                     <li><a href="practice.html">Практика</a></li>
+                     <li><a href="code.html">Код</a></li>
+                     <li><a href="about.html">О нас</a></li>
+                      <li><a href="reviews.html">Отзывы</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="review-section">
+                <h2>Отзывы о Python Start</h2>
+
+                <div class="review-form">
+                    <h3>Оставить отзыв</h3>
+                    <form id="reviewForm">
+                         <label for="name">Имя:</label>
+                        <input type="text" id="name" required><br><br>
+
+                         <label for="rating">Оценка (1-5):</label>
+                         <input type="number" id="rating" min="1" max="5" required><br><br>
+
+                        <label for="comment">Комментарий:</label>
+                        <textarea id="comment" rows="5" required></textarea><br><br>
+
+                        <button type="submit" class="button">Отправить</button>
+                    </form>
+                </div>
+
+                <div class="reviews">
+                    <h3>Отзывы пользователей:</h3>
+                    <ul id="reviewList">
+                        <!-- Здесь будут отображаться отзывы -->
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Python Start</p>
+    </footer>
+     <script src="code.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+</body>
+</html>

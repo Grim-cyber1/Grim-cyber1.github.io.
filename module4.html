@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 4: Функции</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Python Start</a>
+                 <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="module1.html"><i class="fas fa-book"></i> Модули</a></li>
+                    <li><a href="practice.html"><i class="fas fa-code"></i> Практика</a></li>
+                    <li><a href="code.html"><i class="fas fa-laptop-code"></i> Код</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="reviews.html"><i class="fas fa-comments"></i> Отзывы</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <section class="module-content">
+                <button class="back-button"><i class="fas fa-arrow-left"></i> Назад</button>
+                <h2 data-module="4">Модуль 4: Функции <span class="module-status" id="module4-status"></span></h2>
+
+                <h3>Определение функций</h3>
+                <p>Функции в Python - это блоки кода, которые выполняют определенную задачу. Они помогают разбить программу на модули и повторно использовать код.</p>
+                <div class="code-example">
+                    <pre>
+                        <code>
+                            def greet(name):
+                                print("Hello, " + name + "!")
+                           greet("Alice")
+                        </code>
+                    </pre>
+                </div>
+
+                 <h3>Аргументы функций</h3>
+                 <p>Функции могут принимать аргументы, которые передаются в функцию при ее вызове.</p>
+                 <div class="code-example">
+                     <pre>
+                        <code>
+                            def add(x, y):
+                               return x + y
+                           result = add(5, 3)
+                           print(result)
+                        </code>
+                     </pre>
+                 </div>
+                <h3>Возврат значений</h3>
+                <p>Функции могут возвращать значение с помощью оператора <code>return</code>.</p>
+                <div class="code-example">
+                    <pre>
+                        <code>
+                           def multiply(a, b):
+                              return a * b
+                           result = multiply(4, 6)
+                           print(result)
+                       </code>
+                    </pre>
+                </div>
+                <h3>Область видимости переменных</h3>
+                <p>Переменные, объявленные внутри функции, имеют локальную область видимости и не видны за пределами функции.</p>
+                 <div class="code-example">
+                    <pre>
+                       <code>
+                            def my_function():
+                                x = 10
+                                print(x)
+                           my_function()
+
+                       </code>
+                    </pre>
+                 </div>
+                 <button class="mark-complete button">Отметить как пройденный</button>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Python Start</p>
+    </footer>
+    <script src="code.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Start - Код</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <style>
+        .code-area {
+          width: 100%;
+          height: 400px;
+          border: 1px solid #ddd;
+          font-family: monospace;
+           margin-bottom: 1em;
+        }
+        #output {
+            border: 1px solid #ddd;
+            padding: 10px;
+            white-space: pre-wrap;
+             margin-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Python Start</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="module1.html">Курс</a>
+            <a href="practice.html">Практика</a>
+            <a href="code.html">Код</a>
+            <a href="about.html">О нас</a>
+        </nav>
+    </header>
+    <main>
+        <section class="code-section">
+            <h2>Онлайн Python редактор</h2>
+            <p>Напишите свой код Python в редакторе ниже и нажмите "Выполнить", чтобы увидеть результат.</p>
+           <textarea id="code" class="code-area"></textarea>
+            <button onclick="runCode()" class="button">Выполнить</button>
+             <div id="output"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Python Start</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+
+    <script>
+        let pyodide;
+        async function loadPyodide() {
+            pyodide = await loadPyodide();
+            console.log("Pyodide loaded");
+        }
+         loadPyodide();
+
+         let codeEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        mode: "python",
+        lineNumbers: true,
+        theme: "default",
+         });
+
+         // Make runCode async
+        async function runCode() {
+            // Check if pyodide is loaded
+            if (!pyodide) {
+               alert("Pyodide is still loading, please wait!");
+               return;
+            }
+
+            const code = codeEditor.getValue();
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '';
+            try {
+                await pyodide.runPythonAsync(`
+                import io, sys
+                buffer = io.StringIO()
+                sys.stdout = buffer
+                ${code}
+                sys.stdout = sys.__stdout__
+                print(buffer.getvalue())
+                `);
+               outputDiv.innerText = pyodide.globals.get('buffer').getvalue();
+
+            }
+            catch (error) {
+                outputDiv.innerText = String(error);
+            }
+        }
+    </script>
+
+ <script src="code.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+
+</body>
+</html>

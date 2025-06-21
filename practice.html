@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Python Start</a>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="module1.html"><i class="fas fa-book"></i> Модули</a></li>
+                    <li><a href="practice.html"><i class="fas fa-code"></i> Практика</a></li>
+                    <li><a href="code.html"><i class="fas fa-laptop-code"></i> Код</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="reviews.html"><i class="fas fa-comments"></i> Отзывы</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+             <section class="practice-content">
+                <h2>Практические задания</h2>
+
+                <div class="practice-task">
+                    <h3>Задание 1: Вывод приветствия</h3>
+                    <p>Напишите программу, которая выводит на экран текст "Hello, Python!".</p>
+                    <textarea id="task1-solution" placeholder="Введите ваше решение"></textarea>
+                     <button class="button submit-button" data-task="1">Отправить решение</button>
+                     <div class="solution-feedback" id="feedback1"></div>
+                </div>
+
+                <div class="practice-task">
+                    <h3>Задание 2: Сумма двух чисел</h3>
+                    <p>Напишите программу, которая складывает два числа (5 и 7) и выводит результат.</p>
+                    <textarea id="task2-solution" placeholder="Введите ваше решение"></textarea>
+                    <button class="button submit-button" data-task="2">Отправить решение</button>
+                     <div class="solution-feedback" id="feedback2"></div>
+                </div>
+
+                 <div class="practice-task">
+                    <h3>Задание 3: Условный вывод</h3>
+                     <p>Напишите программу, которая проверяет, является ли число 10 больше 5. Если да, то выводит "Yes", иначе выводит "No".</p>
+                    <textarea id="task3-solution" placeholder="Введите ваше решение"></textarea>
+                    <button class="button submit-button" data-task="3">Отправить решение</button>
+                     <div class="solution-feedback" id="feedback3"></div>
+                </div>
+
+                 <div class="practice-task">
+                     <h3>Задание 4: Цикл for</h3>
+                      <p>Напишите программу, которая выводит все числа от 0 до 4 (включительно) с помощью цикла for.</p>
+                    <textarea id="task4-solution" placeholder="Введите ваше решение"></textarea>
+                    <button class="button submit-button" data-task="4">Отправить решение</button>
+                    <div class="solution-feedback" id="feedback4"></div>
+                </div>
+
+            </section>
+         </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Python Start</p>
+    </footer>
+    <script src="code.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+</body>
+</html>

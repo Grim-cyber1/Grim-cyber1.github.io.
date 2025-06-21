@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 1: Основы Python</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Python Start</a>
+                <ul class="nav-links">
+                     <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="module1.html"><i class="fas fa-book"></i> Модули</a></li>
+                    <li><a href="practice.html"><i class="fas fa-code"></i> Практика</a></li>
+                    <li><a href="code.html"><i class="fas fa-laptop-code"></i> Код</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="reviews.html"><i class="fas fa-comments"></i> Отзывы</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+             <section class="module-content">
+                 <button class="back-button"><i class="fas fa-arrow-left"></i> Назад</button>
+                 <h2 data-module="1">Модуль 1: Основы Python <span class="module-status" id="module1-status"></span></h2>
+                  <h3>Введение в Python</h3>
+                <p>Python - это мощный и простой в изучении язык программирования. Он подходит как для новичков, так и для опытных разработчиков.</p>
+
+                <h3>Основные концепции</h3>
+                  <ul>
+                     <li><strong>Переменные:</strong> Хранят данные (числа, текст и т.д.)</li>
+                    <li><strong>Типы данных:</strong> Определяют, какого рода данные хранятся</li>
+                     <li><strong>Операторы:</strong> Символы для выполнения операций</li>
+                    <li><strong>Ввод/вывод:</strong> Позволяют общаться с программой</li>
+                 </ul>
+                <p>Пример простого вывода:</p>
+                 <div class="code-example">
+                     <pre>
+                       <code>print("Hello, Python!")</code>
+                     </pre>
+                 </div>
+                  <p>Это выведет на экран "Hello, Python!".</p>
+                     <button class="mark-complete button">Отметить как пройденный</button>
+                   <a href="module2.html" class="button next-module-button">Перейти к следующему модулю <i class="fas fa-arrow-right"></i></a>
+           </section>
+         </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Python Start</p>
+    </footer>
+  <script src="code.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+</body>
+</html>

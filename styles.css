@@ -1,0 +1,675 @@
+/* Общие стили */
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom right, #f0f8ff, #e0ffff);
+    color: #343a40;
+    line-height: 1.7;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="rgba(255,255,255,0.1)"><circle cx="50" cy="50" r="30"/></svg>');
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Стили для навигации */
+.navbar {
+    background-color: rgba(255,255,255,0.9);
+    padding: 18px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.09);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #3498db;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #495057;
+    padding: 14px 18px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-size: 18px;
+    border-radius: 7px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.nav-links li a i {
+    margin-right: 7px;
+    vertical-align: middle;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(173, 216, 230, 0.2);
+    color: #3498db;
+}
+
+/* Стили для основного контента */
+main {
+    padding: 40px 0;
+}
+
+/* Общие стили для секций */
+section {
+    background-color: rgba(255,255,255,0.9);
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.09);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+section h2 {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2c3e50;
+    font-size: 32px;
+}
+
+/* Стили для модулей */
+.module-content h2 {
+    font-size: 34px;
+}
+
+.module-content h3 {
+    font-size: 26px;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.module-content p {
+    font-size: 19px;
+    color: #495057;
+    margin-bottom: 25px;
+}
+
+.code-example {
+    background-color: rgba(240, 240, 240, 0.8);
+    border-radius: 10px;
+    padding: 25px;
+    overflow-x: auto;
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+}
+
+.code-example pre {
+    margin: 0;
+    font-size: 17px;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
+}
+
+.module-status {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-left: 12px;
+}
+
+.module-status.completed {
+    background-color: #2ecc71;
+}
+
+/* Стили для кнопок */
+.button {
+    display: inline-block;
+    padding: 16px 35px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    transform: scale(1.03);
+}
+
+.back-button {
+    margin-bottom: 25px;
+}
+
+/* Стили для отзывов */
+.reviews-section {
+    background-color: rgba(255,255,255,0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.09);
+}
+
+.reviews-section h2 {
+    font-size: 34px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 18px;
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #495057;
+    font-size: 18px;
+}
+
+.review-form input[type="text"],
+.review-form input[type="email"],
+.review-form textarea,
+.review-form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 17px;
+    color: #495057;
+}
+
+#reviewList {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+#reviewList li {
+    padding: 18px;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Стили для практики */
+.practice-content {
+    background-color: rgba(255,255,255,0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.09);
+}
+
+.practice-content h2 {
+    font-size: 34px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 18px;
+}
+
+.practice-task {
+    margin-bottom: 40px;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: rgba(240, 240, 240, 0.3);
+}
+
+.practice-task h3 {
+    font-size: 26px;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.practice-task p {
+    font-size: 19px;
+    color: #495057;
+    margin-bottom: 25px;
+}
+
+.practice-task textarea {
+    width: 100%;
+    height: 200px;
+    padding: 18px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: 'Fira Code', monospace;
+}
+
+.submit-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    padding: 16px 35px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 0;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.03);
+}
+
+.solution-feedback {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(240, 240, 240, 0.8);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+/* Стили для секции FAQ */
+.faq-section {
+    background-color: rgba(255,255,255,0.9);
+    padding: 40px 0;
+}
+
+.faq-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq-section h2 {
+    font-size: 34px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 18px;
+}
+
+.faq-item {
+    background-color: rgba(240, 240, 240, 0.2);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+    background-color: rgba(240, 240, 240, 0.5);
+}
+
+.faq-item h3 {
+    font-size: 26px;
+    color: #34495e;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item h3 i {
+    transition: transform 0.3s ease;
+}
+
+.faq-item p {
+    font-size: 19px;
+    color: #495057;
+    line-height: 1.7;
+    display: none;
+}
+
+.faq-item.active p {
+    display: block;
+}
+
+.faq-item.active h3 i {
+    transform: rotate(180deg);
+}
+
+/* Стили для футера */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #34495e;
+    color: #fff;
+    font-size: 17px;
+}
+
+/* Стили для переключателя тем */
+.theme-toggle-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: #2c3e50;
+    transition: color 0.3s ease;
+    padding: 5px;
+}
+
+.theme-toggle-button:hover {
+    color: #3498db;
+}
+
+.theme-toggle-button i {
+    vertical-align: middle;
+}
+
+/* Стили для темной темы */
+body.dark-theme {
+    background-image: linear-gradient(to bottom right, #2c3e50, #34495e);
+    color: #ecf0f1;
+    transition: background-image 0.3s ease;
+}
+
+body.dark-theme::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="rgba(255,255,255,0.07)"><circle cx="50" cy="50" r="30"/></svg>');
+}
+
+.dark-theme .navbar {
+    background-color: rgba(52, 73, 94,0.9);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
+}
+
+.dark-theme .logo {
+    color: #ecf0f1;
+}
+
+.dark-theme .nav-links li a {
+    color: #bdc3c7;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.dark-theme .nav-links li a:hover {
+    background-color: rgba(173, 216, 230, 0.1);
+    color: #3498db;
+}
+
+.dark-theme section {
+    background-color: rgba(44, 62, 80, 0.9);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.08);
+}
+
+.dark-theme section h2 {
+    color: #ecf0f1;
+    border-bottom: 2px solid #34495e;
+}
+
+.dark-theme .module-content h3,
+.dark-theme .practice-task h3,
+.dark-theme .faq-item h3 {
+    color: #ecf0f1;
+}
+
+.dark-theme .module-content p,
+.dark-theme .practice-task p,
+.dark-theme .faq-item p {
+    color: #bdc3c7;
+}
+
+.dark-theme .code-example {
+    background-color: rgba(44, 62, 80, 0.5);
+    border: 1px solid #34495e;
+}
+
+.dark-theme .review-form label {
+    color: #bdc3c7;
+}
+
+.dark-theme .review-form input[type="text"],
+.dark-theme .review-form input[type="email"],
+.dark-theme .review-form textarea,
+.dark-theme .review-form select {
+    border: 1px solid #34495e;
+    color: #ecf0f1;
+    background-color: rgba(44, 62, 80, 0.7)
+}
+
+.dark-theme .solution-feedback {
+    background-color: rgba(44, 62, 80, 0.5);
+    border: 1px solid #34495e;
+}
+
+.dark-theme .faq-item {
+    background-color: rgba(44, 62, 80, 0.1);
+    border: 1px solid #34495e;
+}
+
+.dark-theme .faq-item:hover {
+    background-color: rgba(44, 62, 80, 0.3);
+}
+
+footer.dark-theme {
+    background-color: #2c3e50;
+}
+
+.dark-theme .button {
+    color: #ecf0f1;
+}
+
+/* Анимации */
+.next-module-button {
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+.next-module-button i {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Стили для страницы "О нас" */
+.about-section {
+    /* Задаем светло-голубой фон с небольшой прозрачностью */
+    background-color: rgba(240, 248, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.09);
+    margin-bottom: 30px;
+    /* Сохраняем градиент для нежного эффекта */
+    background-image: linear-gradient(to bottom right, #f0f8ff, #e0ffff);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Тот же рисунок, что и в body::before */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="rgba(255,255,255,0.1)"><circle cx="50" cy="50" r="30"/></svg>');
+    z-index: 0;
+    opacity: 0.6; /* Слегка приглушаем рисунок */
+}
+
+.about-title {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 10px auto 10px 15px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+.about-nav-buttons {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 15px auto 0px 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-section h2 {
+    font-size: 3.2em;
+    color: #2c3e50;
+    margin: 15px auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем блоки текста */
+    position: relative;
+    z-index: 1;
+}
+
+/* Убираем стили, связанные с картинкой */
+.about-image {
+    display: none; /* Скрываем изображение */
+}
+
+.about-text {
+    flex: 1; /* Текст занимает всю ширину */
+    max-width: 800px; /* Ограничиваем ширину текста */
+    margin: 0 auto; /* Центрируем текст по горизонтали */
+}
+
+.about-text h3 {
+    font-size: 2em;
+    color: #34495e;
+    margin-bottom: 10px;
+    text-align: center; /* Выравниваем заголовки по центру */
+}
+
+.about-text p {
+    font-size: 1.1em;
+    color: #495057;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-align: justify; /* Выравниваем текст по ширине */
+}
+
+.about-mission,
+.about-team,
+.about-python {
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.7); /* Непрозрачный белый */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.about-mission:hover,
+.about-team:hover,
+.about-python:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Стили для кнопок */
+.about-nav-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.about-nav-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.03);
+}
+
+.about-nav-button i {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Dark theme adjustments for About section */
+body.dark-theme .about-section {
+    background-image: linear-gradient(to bottom right, #34495e, #2c3e50);
+    background-color: rgba(44, 62, 80, 0.9);
+}
+
+body.dark-theme .about-section::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="rgba(0,0,0,0.1)"><circle cx="50" cy="50" r="30"/></svg>');
+    opacity: 0.4;
+}
+
+body.dark-theme .about-title,
+body.dark-theme .about-section h2,
+body.dark-theme .about-text h3 {
+    color: #ecf0f1;
+}
+
+body.dark-theme .about-text p {
+    color: #bdc3c7;
+}
+
+body.dark-theme .about-mission,
+body.dark-theme .about-team,
+body.dark-theme .about-python {
+    background-color: rgba(52, 73, 94, 0.7);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.08);
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 3: Работа с коллекциями</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Python Start</a>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="module1.html"><i class="fas fa-book"></i> Модули</a></li>
+                    <li><a href="practice.html"><i class="fas fa-code"></i> Практика</a></li>
+                    <li><a href="code.html"><i class="fas fa-laptop-code"></i> Код</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="reviews.html"><i class="fas fa-comments"></i> Отзывы</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <section class="module-content">
+                <button class="back-button"><i class="fas fa-arrow-left"></i> Назад</button>
+                <h2 data-module="3">Модуль 3: Работа с коллекциями <span class="module-status" id="module3-status"></span></h2>
+
+                <h3>Списки</h3>
+                <p>Списки в Python - это упорядоченные изменяемые коллекции элементов. Они могут содержать элементы разных типов.</p>
+                <div class="code-example">
+                    <pre>
+                        <code>
+                            my_list = [1, 2, "hello", 3.14]
+                            print(my_list)
+                            my_list.append(5)
+                            print(my_list)
+                        </code>
+                    </pre>
+                </div>
+
+                 <h3>Кортежи</h3>
+                <p>Кортежи - это упорядоченные, но неизменяемые коллекции элементов. После создания кортеж нельзя изменить.</p>
+                <div class="code-example">
+                    <pre>
+                        <code>
+                            my_tuple = (1, 2, "world")
+                            print(my_tuple)
+
+                        </code>
+                    </pre>
+                </div>
+
+                <h3>Словари</h3>
+                <p>Словари - это коллекции, которые хранят пары "ключ-значение".  Ключи должны быть уникальными и неизменяемыми.</p>
+                <div class="code-example">
+                  <pre>
+                    <code>
+                        my_dict = {"name": "Alice", "age": 30}
+                        print(my_dict["name"])
+
+                         my_dict["city"] = "New York"
+                         print(my_dict)
+                    </code>
+                  </pre>
+                 </div>
+
+                 <h3>Множества</h3>
+                 <p>Множества - это неупорядоченные коллекции уникальных элементов.</p>
+                 <div class="code-example">
+                   <pre>
+                     <code>
+                        my_set = {1, 2, 3, 2}
+                         print(my_set)
+                         my_set.add(4)
+                         print(my_set)
+                     </code>
+                   </pre>
+                 </div>
+                  <button class="mark-complete button">Отметить как пройденный</button>
+                  <a href="module4.html" class="button next-module-button">Перейти к следующему модулю <i class="fas fa-arrow-right"></i></a>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Python Start</p>
+    </footer>
+  <script src="code.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+</body>
+</html>
